@@ -68,7 +68,7 @@ export class AppComponent {
 
     }
     saveAnswer($event, model){
-        model.solvedResult = $event.target.value;
+        model.solvedResult =  0 + $event.target.value;
     }
 }
 
