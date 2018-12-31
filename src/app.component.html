@@ -7,8 +7,8 @@
       {{model.sign}}
       <input [value]="model.second" readonly>
       =
-      Your Answer<input [value]="model.solvedResult" [(value)]="model.solvedResult || ''"  > | 
-      Answer <input  readonly [value]="model.result" *ngIf="model.solved">
+      Your Answer<input   [(value)]="model.solvedResult"  > | 
+      <span  *ngIf="model.solved">   Answer <input  readonly [value]="model.result"></span>
       <button (click)="check(model)">Check</button>
  
   </div>
