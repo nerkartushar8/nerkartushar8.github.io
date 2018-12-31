@@ -2,7 +2,7 @@
   <h1> You have earned {{score}}</h1>
    <div> <button (click)="generateSum();"> New Sum </button> </div>
   <div *ngFor="let model of models">
-    <div *ngIf="model.error">{{model.error}}</div>
+    <div *ngIf="model.error" style="color:red;">{{model.error}}</div>
       <input [value]="model.first">
       {{model.sign}}
       <input [value]="model.second">
