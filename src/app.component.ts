@@ -26,7 +26,7 @@ export class AppComponent {
       this.model.sign = this.getRandomSign();
       this.model.first = this.random(123434, 999999);
       if(this.model.sign == 'X'){
-        this.model.second = this.random(11, 99);
+        this.model.second = this.random(51, 99);
         this.model.result = this.model.first * this.model.second;
       }
       else if(this.model.sign == '+'){
@@ -56,6 +56,7 @@ export class AppComponent {
       }
     }
     correct(model){
+      model.error = '';
       let index = this.models.indexOf(model);
       this.models.splice(index, 1);
       model.solved = true;
