@@ -7,7 +7,7 @@
       {{model.sign}}
       <input [value]="model.second" readonly>
       =
-      Your Answer {{model.solvedResult}}<input   [(value)]="model.solvedResult"  > | 
+      Your Answer {{model.solvedResult}}<input   [value]="model.solvedResult" (change)="saveAnswer($event, model)" > | 
       <span  *ngIf="model.solved">   Answer <input  readonly [value]="model.result"></span>
       <button (click)="check(model)">Check</button>
  

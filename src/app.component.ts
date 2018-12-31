@@ -67,5 +67,8 @@ export class AppComponent {
       this.score = this.score - (100 * 3);
 
     }
+    saveAnswer($event, model){
+        model.solvedResult = $event.target.value;
+    }
 }
 
